@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div id="main-login-form">
+    <div id="login-form">
+        <h3>Sign In</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% include 'base/alert.html'%}
+            <input type="text" name="" id="" required placeholder="User Name"><br>
+            <input type="text" name="" id="" required placeholder="Password"><br>
+            <p>Forgot Password ?</p>
+            <button><span>SIGN IN </span></button>
+        </form>
+        <p>Don't have Account? <a href="/account/register">Register</a></p>
+    </div>
+</div>
+{% endblock %}

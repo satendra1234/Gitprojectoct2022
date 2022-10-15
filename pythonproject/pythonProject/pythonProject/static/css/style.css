@@ -1,0 +1,329 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 4.5rem;
+    border: 1px solid white;
+    background-color: white;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+#header .logo{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;   
+}
+#menu-list ul{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+#menu-list ul li{
+    list-style: none;
+    padding:0rem 1rem;
+    font-family: Poppins-Bold;
+    font-size: larger;
+    font-weight: lighter;
+    color:#333
+}
+#menu-list ul li a{
+    text-decoration: none;
+    color:#333;
+}
+#srch-cart-whl ul{
+    display: flex;
+    position: relative;
+}
+#srch-cart-whl ul li{
+    list-style: none;
+    padding: 0rem 3rem;
+    position: relative;
+}
+#srch-cart-whl ul li input[type="search"]{
+    height: 2rem;
+    width: 20rem;
+}
+.fa-magnifying-glass{
+    color: white;
+    
+}
+#srch-cart-whl ul li i{
+    position: absolute;
+    top: 0.5rem;
+    right: 4rem;
+    color: white;
+    z-index: 1;
+}
+#srch-cart-whl ul::after{
+    content: '';
+    background-color: #333;
+    position: absolute;
+    width: 3rem;
+    right: 21rem;
+    height: 2rem;
+    color: white; 
+}
+
+.fa-cart-shopping, .fa-heart, .fa-user{
+    position: absolute;
+    padding: 0.5rem;
+    top: 0.2rem !important;
+    background: #333;
+    border-radius: 16px;
+    color: wheat;
+}
+
+/* =====================Carousel=================== */
+
+.item img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    height: 70vh;
+}
+/* =================category============ */
+.show-category{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.show-category .cat-image{
+    position: relative;
+    margin:0.5rem 1rem;
+    overflow: hidden;
+    z-index: 1;
+}
+.show-category .cat-image h2{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+.show-category .cat-image img{
+    height: 40vh;
+    border: 1px solid lightgray;
+}
+.cat-image::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+}
+.cat-image:hover::before{
+    background-color: rgba(113, 127, 224,0.7);
+}
+.cat-image::after{
+    content: 'Shop Now';
+    position: absolute;
+    color: white;
+    left: 2rem;
+    bottom: -2rem;
+    border-bottom: 2px solid white;
+    transition:bottom 0.5s;
+}
+.cat-image:hover::after{
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    color: white;
+}
+
+.cat-image:hover h2{
+    color: white;
+    z-index: 1;
+}
+/* category end */
+/* ================================================ */
+/* product overview start */
+#produ-heading{
+    width: 87%;
+    margin: 0 auto;
+}
+/* product image start */
+.prod-img{
+    display: flex;
+    justify-content: center;
+}
+.prd-img:hover img{
+    transform: scale(1.1);
+    transition: 3s;
+}
+.prod-img .image{
+    padding: 0 0.5rem;
+    overflow: hidden;
+}
+.prod-img .image img{
+    height: 21.8rem;
+    z-index: -1;
+}
+.image .name-wish{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.image .name-wish span{
+    position: absolute;
+    right: 1rem;
+    padding: 0;
+    background-color: white;
+    font-size: 1.5rem;
+    color: lightgrey;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    margin:1.5rem 0.3rem;
+}
+.prd-img{
+    position: relative;
+    overflow: hidden;
+   
+}
+.prd-img::after{
+    position: absolute;
+    content: 'Quick View';
+    left: 5rem;
+    bottom: -3rem;
+    color: black;
+    padding:0.4rem 2.5rem;
+    background-color: white;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.prd-img:hover::after{
+    bottom: 2rem;
+}
+/* ================footer============ */
+footer{
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50vh;
+}
+footer h4{
+    color: white;
+    padding: 2rem 0rem;
+}
+footer ul{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color: lightgray;
+}
+
+.getintouch{
+    box-sizing: border-box;
+    width: 20rem;
+    height: 12rem;  
+}
+.getintouch p{
+    color: lightgray;
+}
+#copyright{
+    background: #222;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+}
+
+/* product page design */
+.product-list{
+    display: flex;
+    align-items: center;
+    height: 80px; 
+    width: 73.4rem;
+    margin: 0 auto;
+}
+.product-list ul{
+    display: flex;
+}
+.product-list ul li{
+    list-style: none;
+    padding: 1rem;
+}
+.product-list ul li a{
+    text-decoration: none;
+    color:#333
+}
+/* product-detail-page start */
+.main-section{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem;
+}
+.main-section .image-section img{
+    height: 30rem;
+}
+.main-section .product-info-section{
+   width: 400px;
+   word-wrap: break-word;
+   margin-left:5rem;
+}
+
+select{
+    height: 3rem;
+    width: 19rem;
+}
+
+.product-color,.product-size{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.product-color select option:visited{
+    background-color: #333;
+    color: white;
+}
+/* product-detail-page end */
+
+/* login page start here */
+
+
+
+#main-login-form{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    
+}
+
+#main-login-form #login-form{
+    /* border:1px solid lightslategray; */
+    padding:3rem 10rem 5rem 10rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+#main-login-form #login-form form input[type=text],[type=email],input[type=password]{
+    margin-top: 1rem;
+    width: 20rem;
+    height: 2.5rem;
+    /* border-radius: 1px; */
+}
+
+
+#main-login-form #login-form button{
+    width: 20rem;
+    height: 2rem;
+    margin-top: 2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+/* login page end here */

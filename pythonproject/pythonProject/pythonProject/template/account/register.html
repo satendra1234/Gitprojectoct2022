@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div id="main-login-form">
+    <div id="login-form">
+        <h3>Sign Up</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% include 'base/alert.html'%}
+            <input type="text" name="first_name" id="" required placeholder="First Name"><br>
+            <input type="text" name="last_name" id="" required placeholder="Last Name"><br>
+            <input type="email" name="email" id="" required placeholder="Email"><br>
+            <input type="password" name="password" id="" required placeholder="Password"><br>
+            <button><span>LOG IN</span></button>
+            <p>All ready have Account? <a href="/account/login">Sign In</a></p>
+        </form>
+    </div>
+</div>
+{% endblock %}
